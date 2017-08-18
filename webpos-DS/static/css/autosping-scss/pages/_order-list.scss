@@ -1,0 +1,112 @@
+@charset "utf-8";
+.order-list {
+  .order-stat{
+    height: 45px;
+    overflow: hidden;
+  }
+  .nav {
+    position: fixed;
+    width: 100%;
+    height: 45px;
+    top: 0;
+    left: 0;
+    z-index: 5;
+  }
+  .navs {
+    line-height: 45px;
+    background-color: $bBlue;
+    color: #ffffff;
+    .swiper-slide {
+      height: 100%;
+      text-align: center;
+    }
+    .active-nav {
+      box-sizing: border-box;
+      color: #fff000;
+      border-bottom: 2px solid #fff000;
+    }
+  }
+  section {
+    margin-top: 45px;
+  }
+  .no-order {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .no-odr-box{
+    margin-top: 120px;
+    img{
+      width: 36%;
+      max-width: 200px;
+      display: block;
+      margin: 0 auto;
+    }
+    .no-order{
+      margin-top: 10px;
+      color: #999;
+    }
+    p{
+      position: relative;
+      overflow: hidden;
+      height: 45px;
+      margin-top: 120px;
+      .scan-btn{
+        top: 0;
+        bottom: inherit;
+      }
+    }
+  }
+  .order-ctn {
+    margin-bottom: 10px;
+    border-top: 1px solid $bdc;
+    border-bottom: 1px solid $bdc;
+    background: #fff;
+    .stat {
+      height: get_rem(40);
+      line-height: get_rem(40);
+      span {
+        position: relative;
+        padding-left: 25px;
+      }
+      i {
+        color: $bOrg;
+        float: right;
+      }
+      .store-gray-icon:after {
+        @include positVC;
+        left: 0;
+      }
+    }
+  }
+  .view-more{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: $bBlue;
+    font-size: $f12;
+  }
+  .oprs {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid $bdc;
+    text-align: right;
+    .pri {
+      span {
+        margin-left: 15px;
+      }
+    }
+    .opr {
+      margin-top: 7px;
+      a {
+        display: inline-block;
+        height: get_rem(25);
+        line-height: get_rem(25);
+        padding: 0 15px;
+        background: $bOrg;
+        color: #fff;
+        font-size: $f12;
+        border-radius: 4px;
+      }
+    }
+  }
+}

@@ -1,0 +1,142 @@
+@charset "utf-8";
+/*CSS Reset*/
+@font-face {
+  font-family: "iconfont";
+  src: url(../../font/iconfont.ttf) format("truetype"); }
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+header,
+nav,
+section,
+article,
+aside,
+footer,
+figure,
+figcaption,
+menu,
+button {
+  margin: 0;
+  padding: 0; }
+
+
+@media screen and (min-width: $bigMin) {
+  html{
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: $mediumMin) and (max-width: $mediumMax) {
+  html{
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: $smallMin) and (max-width: $smallMax) {
+  html{
+    font-size: 14px;
+  }
+}
+
+body {
+  font-family: "Helvetica Neue","Microsoft Yahei",Helvetica,STHeiTi,sans-serif;
+  line-height: 1.5;
+  font-size: $f14;
+  color: #333;
+  background-color: #f5f6fa;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  margin: 0 auto;
+  outline: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  min-height: 100vh;
+  height: 100%;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  max-width: 1000px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th {
+  text-align: left; }
+
+fieldset,
+img {
+  border: 0; }
+
+li {
+  list-style: none; }
+
+ins {
+  text-decoration: none; }
+
+del {
+  text-decoration: line-through; }
+input{
+  -webkit-appearance : none ; 
+  border-radius: 0;
+  text-indent: 5px;
+}
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  outline: 0; }
+
+button {
+  -webkit-appearance: none;
+  border: 0;
+  background: none; }
+
+a {
+  -webkit-touch-callout: none;
+  text-decoration: none;
+  color: #333;
+}
+
+:focus {
+  outline: 0;
+  -webkit-tap-highlight-color: transparent; }
+
+em, i {
+  font-style: normal; }
+

@@ -1,0 +1,419 @@
+@charset "utf-8";
+
+//公共商品列表
+.pub-gd-list{
+  .pro{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #fff;
+    overflow: hidden;
+    img{
+      float: left;
+      width: get_rem(70);
+      box-sizing: border-box;
+      border: 1px solid $bdc;
+    }
+    .inf{
+      margin-left: get_rem(85);
+      height: get_rem(70);
+      position: relative;
+      h4{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        color: #666;
+      }
+      .det{
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+      }
+      .num{
+        float: right;
+      }
+    }
+  }
+}
+//公共头部
+header.store {
+  position: fixed;
+  width: 100%;
+  height: get_rem(40);
+  line-height: get_rem(40);
+  top: 0;
+  left: 0;
+  color: #fff;
+  background: $bBlue;
+  font-size: $f16;
+  span {
+    position: relative;
+    float: left;
+    height: 100%;
+    padding-left: 30px;
+  }
+  span:after {
+    @include positVC;
+    left: 0;
+  }
+  a {
+    float: right;
+    color: $pG;
+  }
+}
+
+
+//公共尾部
+.pub-footer {
+  .end-opr,
+  .end-opr-2 {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #dee7f5;
+    box-sizing: border-box;
+    padding-left: 10px;
+    font-size: 15px;
+    .lf {
+      float: left;
+      i {
+        color: $bOrg;
+      }
+    }
+    .settle,
+    .empty,
+    .pay{
+      float: right;
+      height: 100%;
+      width: 100px;
+      text-align: center;
+      color: #fff;
+      background: $bOrg;
+    }
+    .end-total {
+      margin-right: 15px;
+    }
+  }
+}
+//侧边栏悬浮
+.side-bar{
+  position: fixed;
+  bottom: 110px;
+  right: 10px;
+  width: 30px;
+  li{
+    height: 30px;
+  }
+  .acot{
+    margin-bottom: 15px;
+    background: $bBlue;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    a{
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+  }
+  .account-icon:after{
+    @include positCenter;
+  }
+}
+
+.pub-key-value{
+  width: 100%;
+  height: get_rem(40);
+  line-height: get_rem(38);
+  box-sizing: border-box;
+  padding: 0 10px 0 10px;
+  background: #fff;
+  i{
+    float: right;
+  }
+}
+
+//公共连接样式
+.pub-link{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.64286rem 1.92857rem 0.64286rem 0.64286rem;
+  background-color: #fff;
+  position: relative;
+  i{
+    float: right;
+    color: #999;
+  }
+}
+.pub-link:after{
+  font-family: "iconfont" !important;
+  color: #c7c7c7;
+  content: "\f600";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 25px;
+  line-height: get_rem(40);
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  display: block;
+}
+//扫描按钮
+.scan-btn{
+  display: block;
+  width: 150px;
+  height: 45px;
+  line-height: 45px;
+  padding-left: 35px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  margin-left: -75px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  background-color: #ff6600;
+}
+.scan-btn:after{
+  left: 10px;
+  @include positVC;
+}
+
+.bdt{
+  border-top: 1px solid $bdc;
+}
+.bdb{
+  border-bottom: 1px solid $bdc;
+}
+.hide{
+  display: none;
+}
+
+.br{
+  padding-top: 10px;
+}
+
+//pitch on
+.checkbox-icon input[type='checkbox'],
+.checkbox-icon input[type='radio'] {
+  overflow: visible;
+  border: none;
+  background: 0 0;
+  -webkit-appearance: none;
+  outline: none;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 0;
+}
+
+.checkbox-icon{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+.checkbox-icon input[type='checkbox']:before,
+.checkbox-icon input[type='radio']:before{
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  background: url("../../../img/autosping/icon.png") no-repeat -152px 0px/250px;
+}
+
+.checkbox-icon input[type='checkbox']:checked:before,
+.checkbox-icon input[type='radio']:checked:before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background: url("../../../img/autosping/icon.png") no-repeat -63px 6px/180px;
+  background-color: $bOrg;
+}
+
+
+//color
+.red {
+  color: #e0181a;
+}
+
+.gary {
+  color: #999999;
+}
+
+.bGary {
+  background-color: $bGary;
+}
+
+.fff {
+  color: #fff;
+}
+.ddd{
+  color: #ddd;
+}
+
+//font-size
+.f10 {
+  font-size: $f10;
+}
+
+.f11 {
+  font-size: $f11;
+}
+
+.f12 {
+  font-size: $f12;
+}
+
+.f13 {
+  font-size: $f13;
+}
+
+.f14 {
+  font-size: $f14;
+}
+
+.f15 {
+  font-size: $f15;
+}
+
+.f16 {
+  font-size: $f16;
+}
+
+.f17 {
+  font-size: $f17;
+}
+
+.f18 {
+  font-size: $f18;
+}
+
+.fw {
+  font-weight: bold;
+}
+
+//text-style
+.txt-lf {
+  text-align: left;
+}
+
+.txt-rt {
+  text-align: right;
+}
+
+//mark layer
+.markBlack {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 95;
+  background-color: rgba(0, 0, 0, .7);
+}
+
+//space
+.space-10 {
+  width: 100%;
+  padding-top: 10px;
+  border: none;
+  position: relative;
+}
+
+//forbidden
+.forbidden {
+  background-color: #d0d0d0 !important;
+  pointer-events: none;
+}
+
+//数量加减框
+.zt-number {
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  width: 100px;
+  height: 25px;
+  border: 1px solid $bc;
+  border-radius: 3px;
+  span, input {
+    display: block;
+  }
+  .zt-sub, .zt-add {
+    width: 45px;
+    height: 25px;
+    position: relative;
+    box-sizing: border-box;
+  }
+  .zt-num {
+    width: 40px;
+    height: 25px;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: $f16;
+    text-indent: 0;
+  }
+  .zt-sub {
+    border-right: 1px solid $bc;
+    cursor: pointer;
+  }
+  .zt-sub:before {
+    content: '';
+    width: 13px;
+    height: 2px;
+    background-color: $bc;
+    @include positCenter;
+  }
+  .zt-add {
+    border-left: 1px solid $bc;
+    cursor: pointer;
+  }
+  .zt-add:before {
+    content: '';
+    width: 13px;
+    height: 2px;
+    background-color: $bBlue;
+    @include positCenter;
+  }
+  .zt-add:after {
+    content: '';
+    width: 2px;
+    height: 13px;
+    background-color: $bBlue;
+    @include positCenter;
+  }
+}

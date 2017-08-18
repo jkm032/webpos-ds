@@ -1,0 +1,182 @@
+@charset "utf-8";
+.shift {
+  .you{
+    cursor: pointer;
+  }
+  @media screen and (min-width: $smallMin) and (max-width: $padPatternMax) {
+    .income {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 25px 0;
+      p {
+        text-align: center;
+      }
+      p:last-child {
+        font-size: 30px;
+        line-height: normal;
+        margin-top: 3px;
+      }
+    }
+    .list {
+      height: 50px;
+      line-height: 48px;
+      width: 100%;
+      padding: 0 10px;
+      box-sizing: border-box;
+      border: 1px solid $bdc;
+      background-color: #fff;
+      margin-bottom: 5px;
+      li {
+        box-sizing: border-box;
+      }
+      li:first-child {
+        width: 26px;
+      }
+      li:nth-child(2) {
+        width: 140px;
+        padding-left: 10px;
+      }
+      .rmb {
+        text-align: right;
+        font-size: $f17;
+      }
+      li:last-child {
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+      }
+      .payicon {
+        position: relative;
+      }
+      .payicon:before {
+        content: '';
+        position: absolute;
+        top: 11px;
+        right: 0;
+        width: 26px;
+        height: 26px;
+      }
+      .zhi:before {
+        background: url("../../../img/icon.png") no-repeat -84px -95px/420px;
+      }
+      .wei:before {
+        background: url("../../../img/icon.png") no-repeat -42px -95px/420px;
+      }
+      .shuaka:before {
+        background: url("../../../img/icon.png") no-repeat -127px -95px/420px;
+      }
+      .xianj:before {
+        background: url("../../../img/icon.png") no-repeat 0 -95px/420px;
+      }
+    }
+    .end{
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background-color: $bOrg;
+      color: #fff;
+    }
+  }
+
+  @media screen and (min-width: $padPattern) {
+    .income {
+      width: 100%;
+      height: 150px;
+      box-sizing: border-box;
+      padding-top: 44px;
+      p {
+        text-align: center;
+      }
+      p:last-child {
+        font-size: 30px;
+        line-height: normal;
+        margin-top: 3px;
+      }
+    }
+    .list-box{
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 16px;
+    }
+    .list {
+      height: 50px;
+      line-height: 48px;
+      width: 100%;
+      padding: 0 20px;
+      box-sizing: border-box;
+      border: 1px solid $bdc;
+      background-color: #fff;
+      margin-bottom: 10px;
+      li {
+        box-sizing: border-box;
+      }
+      li:first-child {
+        width: 26px;
+      }
+      li:nth-child(2) {
+        width: 160px;
+        padding-left: 10px;
+      }
+      .rmb {
+        text-align: right;
+        font-size: $f17;
+      }
+      li:last-child {
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+      }
+      .payicon {
+        position: relative;
+      }
+      .payicon:before {
+        content: '';
+        position: absolute;
+        top: 11px;
+        right: 0;
+        width: 26px;
+        height: 26px;
+      }
+      .zhi:before {
+        background: url("../../../img/icon.png") no-repeat -84px -95px/420px;
+      }
+      .wei:before {
+        background: url("../../../img/icon.png") no-repeat -42px -95px/420px;
+      }
+      .shuaka:before {
+        background: url("../../../img/icon.png") no-repeat -127px -95px/420px;
+      }
+      .xianj:before {
+        background: url("../../../img/icon.png") no-repeat 0 -95px/420px;
+      }
+    }
+    .end{
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      background-color: $bOrg;
+      color: #fff;
+      cursor: pointer;
+    }
+    section{
+      border-bottom: 70px solid transparent;
+    }
+  }
+  .pop-qr{
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    background: url("../../../img/icon.png") no-repeat -50px -113px/350px;
+  }
+  .wd-pop{
+    margin-top: 10px;
+  }
+}

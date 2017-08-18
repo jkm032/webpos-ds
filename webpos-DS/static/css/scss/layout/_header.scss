@@ -1,0 +1,319 @@
+@charset "utf-8";
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  z-index: 80;
+  background-color: $bBlue;
+  .icon-nav,
+  .icon-rtn,
+  .icon-edit,
+  .icon-scan,
+  .icon-true,
+  .icon-trash,
+  .jiahao{
+    cursor: pointer;
+  }
+}
+
+.header-def {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  > div {
+    height: 45px;
+    width: 40px;
+    position: relative;
+    cursor: pointer;
+  }
+  .icon-rtn, .icon-nav {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .icon-nav {
+    width: 40px;
+    opacity: 1;
+  }
+  .icon-rtn {
+    width: 0;
+    opacity: 0;
+  }
+}
+
+.header-edit {
+  opacity: 0;
+  //width: 0;
+  overflow: hidden;
+  z-index: 79;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  > div {
+    height: 45px;
+    width: 40px;
+    position: relative;
+  }
+  > div:first-child {
+    float: left;
+  }
+  div:nth-child(2), div:nth-child(3) {
+    float: right;
+  }
+}
+
+.changeHeader-1 {
+  -webkit-transform: translateY(-80px);
+  -moz-transform: translateY(-80px);
+  -ms-transform: translateY(-80px);
+  -o-transform: translateY(-80px);
+  transform: translateY(-80px);
+}
+
+.changeHeader-2 {
+  opacity: 1;
+}
+
+
+
+.stretch {
+  .icon-rtn {
+    width: 40px;
+    opacity: 1;
+  }
+  .icon-nav {
+    width: 0;
+    opacity: 0;
+  }
+  .txm {
+    width: 100%;
+    -webkit-animation: stretch-anim 0.6s;
+    animation: stretch-anim 0.6s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+  }
+  .jiahao {
+    -webkit-animation: jiahao-anim 0.3s;
+    animation: jiahao-anim 0.3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  .icon-edit, .icon-scan {
+    -webkit-animation: am-leave-right 0.6s;
+    animation: am-leave-right 0.6s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+  }
+}
+
+.default-header {
+  background-color: $bBlue;
+  color: #fff;
+  font-size: $f17;
+  .zuo, .you {
+    width: 40px;
+    height: 45px;
+    position: relative;
+  }
+  .zhong {
+    text-align: center;
+    letter-spacing: 2px
+  }
+  .rtn-icon:before, .rtn-f-icon:before {
+    left: 10px;
+  }
+  .add-icon:before {
+    left: 35px;
+  }
+  .you {
+    text-align: center;
+    padding-right: 3px;
+    box-sizing: border-box;
+    line-height: 45px;
+    cursor: pointer;
+    span {
+      position: relative;
+      line-height: 45px;
+      width: 2px;
+      height: 45px;
+      display: inline-block;
+      margin-right: 9px;
+    }
+  }
+}
+
+@-webkit-keyframes stretch-anim {
+  100% {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes jiahao-anim {
+  30% {
+    width: get_rem(0);
+    opacity: 0;
+  }
+  100% {
+    width: get_rem(50);
+    opacity: 1;
+  }
+}
+
+.leave-right {
+  -webkit-animation: am-leave-right 0.6s;
+  animation: am-leave-right 0.6s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both
+}
+
+@-webkit-keyframes am-leave-right {
+  0% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    -webkit-transform: translateX(200px);
+    -moz-transform: translateX(200px);
+    -ms-transform: translateX(200px);
+    -o-transform: translateX(200px);
+    transform: translateX(200px);
+    width: 0;
+  }
+}
+
+@media screen and (min-width: $mediumMin) {
+  .header-def {
+    .barcode {
+      .txm {
+        margin-top: 0;
+        @include positCenter;
+      }
+    }
+  }
+  @-webkit-keyframes stretch-anim {
+    100% {
+      width: 95%;
+    }
+  }
+}
+
+@media screen and (min-width: $mediumMin) and (max-width: $padPatternMax) {
+  .header-def .barcode .txm {
+    max-width: get_rem(250);
+  }
+  .stretch .barcode .txm {
+    max-width: none;
+  }
+}
+
+@media screen and (min-width: $padPattern) {
+  header {
+    height: 60px;
+    line-height: 60px;
+  }
+  .header-def {
+    .icon-nav {
+      width: 60px;
+      opacity: 1;
+    }
+    > div {
+      height: 60px;
+      width: 65px;
+    }
+    .barcode {
+      box-sizing: border-box;
+      padding: 0 15px;
+      position: static;
+      .txm {
+        box-sizing: border-box;
+        width: get_rem(250);
+        height: get_rem(30);
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        border: 1px solid #d3e5ff;
+      }
+      .jiahao {
+        display: block;
+        width: get_rem(42);
+        height: get_rem(30);
+        background-color: #fff;
+        opacity: 1;
+      }
+      input {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        float: left;
+        box-sizing: border-box;
+        width: get_rem(208);
+        height: get_rem(24);
+        margin-top: get_rem(3);
+        text-indent: get_rem(8);
+      }
+    }
+  }
+
+  .default-header {
+    font-size: 18px;
+    .zuo, .you {
+      width: 65px;
+      height: 60px;
+      position: relative;
+    }
+    .zhong {
+      text-align: center;
+      letter-spacing: 2px
+    }
+    .rtn-icon:before, .rtn-f-icon:before {
+      left: 10px;
+    }
+    .add-icon:before {
+      left: 35px;
+    }
+    .you {
+      text-align: center;
+      padding-right: 3px;
+      box-sizing: border-box;
+      line-height: 60px;
+      span {
+        position: relative;
+        line-height: 60px;
+        width: 2px;
+        height: 60px;
+        display: inline-block;
+        margin-right: 9px;
+      }
+    }
+  }
+
+  .header-edit {
+    > div {
+      height: 60px;
+      width: 65px;
+      position: relative;
+    }
+  }
+}

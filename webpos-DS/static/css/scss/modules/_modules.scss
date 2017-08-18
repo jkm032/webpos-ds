@@ -1,0 +1,395 @@
+@charset "utf-8";
+//数量加减控件
+@media screen and (min-width: $padPatternMax) {
+  .zt-number {
+    display: box;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+    width: 176px;
+    height: 44px;
+    border: 1px solid $bc;
+    border-radius: 3px;
+    span, input {
+      display: block;
+    }
+    .zt-sub, .zt-add {
+      width: 45px;
+      height: 44px;
+      position: relative;
+      box-sizing: border-box;
+    }
+    .zt-num {
+      width: 76px;
+      height: 44px;
+      border: none;
+      outline: none;
+      text-align: center;
+      margin: 0 5px;
+      font-size: $f16;
+      text-indent: 0;
+    }
+    .zt-sub {
+      border-right: 1px solid $bc;
+      cursor: pointer;
+    }
+    .zt-sub:before {
+      content: '';
+      width: 20px;
+      height: 3px;
+      background-color: $bc;
+      @include positCenter;
+    }
+    .zt-add {
+      border-left: 1px solid $bc;
+      cursor: pointer;
+    }
+    .zt-add:before {
+      content: '';
+      width: 20px;
+      height: 3px;
+      background-color: $bBlue;
+      @include positCenter;
+    }
+    .zt-add:after {
+      content: '';
+      width: 3px;
+      height: 20px;
+      background-color: $bBlue;
+      @include positCenter;
+    }
+  }
+}
+
+@media screen and (min-width: $smallMin) and (max-width: $padPatternMax) {
+  .zt-number {
+    display: box;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+    width: get_rem(110);
+    height: get_rem(30);
+    border-radius: 3px;
+    overflow: hidden;
+    border: 1px solid $bc;
+    span, input {
+      display: block;
+    }
+    .zt-sub, .zt-add {
+      width: get_rem(32);
+      height: get_rem(30);
+      position: relative;
+    }
+    .zt-num {
+      width: get_rem(36);
+      height: get_rem(30);
+      border: none;
+      outline: none;
+      text-align: center;
+      font-size: $f14;
+      text-indent: 0;
+      margin: 0 5px;
+    }
+    .zt-sub {
+      border-right: 1px solid $bc;
+    }
+    .zt-sub:before {
+      content: '';
+      width: 10px;
+      height: 2px;
+      background-color: $bc;
+      @include positCenter;
+    }
+    .zt-add {
+      border-left: 1px solid $bc;
+    }
+    .zt-add:before {
+      content: '';
+      width: 10px;
+      height: 2px;
+      background-color: $bBlue;
+      @include positCenter;
+    }
+    .zt-add:after {
+      content: '';
+      width: 2px;
+      height: 10px;
+      background-color: $bBlue;
+      @include positCenter;
+    }
+  }
+}
+
+//hint style
+.zt-hint-box {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1993;
+  .zt-hint {
+    @include positCenter;
+    min-width: 80px;
+    min-height: 80px;
+    background-color: #fff;
+    -webkit-box-shadow: 3px 3px 5px 0 #e4e4e4;
+    -moz-box-shadow: 3px 3px 5px 0 #e4e4e4;
+    box-shadow: 3px 3px 5px 0 #e4e4e4;
+    padding: 10px 10px 7px;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-direction: normal;
+    -moz-box-lines: multiple;
+    -webkit-box-lines: multiple;
+    -webkit-flex-flow: column wrap;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+    .zt-icon {
+      width: 100%;
+      position: relative;
+      height: 25px;
+      margin-bottom: 5px;
+      display: block;
+    }
+    .zt-cont {
+      width: 100%;
+      @include brkWord;
+      color: $fGary;
+      -webkit-box-flex: 1;
+      -moz-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      -moz-box-pack: center;
+      -webkit-box-pack: center;
+      box-pack: center;
+      -moz-box-align: center;
+      -webkit-box-align: center;
+      box-align: center;
+      box-pack: center;
+      -ms-flex-pack: center;
+      display: -ms-flexbox;
+      -ms-flex-align: center;
+      justify-content: center;
+      align-items: center;
+
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      -o-justify-content: center;
+      justify-content: center;
+      text-align: center;
+
+      -moz-box-orient: vertical;
+      -webkit-box-orient: vertical;
+      -moz-box-direction: normal;
+      -moz-box-lines: multiple;
+      -webkit-box-lines: multiple;
+      -webkit-flex-flow: column wrap;
+      -ms-flex-flow: column wrap;
+      flex-flow: column wrap;
+    }
+    .zt-suc:before, .zt-fail:before {
+      content: '';
+      @include positCenter;
+      width: 20px;
+      height: 20px;
+    }
+    .zt-suc:before {
+      background: url(../../../img/icon.png) no-repeat -101px 0px/390px;
+    }
+    .zt-fail:before {
+      background: url(../../../img/icon.png) no-repeat -132px 0px/390px;
+    }
+  }
+}
+
+.zt-loading {
+  @include positCenter;
+  width: 80px;
+  height: 80px;
+  background: rgba(0, 0, 0, .7);
+  color: $fGary;
+  text-align: center;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.zt-loading-icon {
+  position: relative;
+  height: 35px;
+  padding-top: 15px;
+  img {
+    width: 25px;
+    height: 25px;
+  }
+  .zt-loading-cont {
+    line-height: 35px;
+    font-size: $f13;
+  }
+  .loadingImg {
+    -webkit-transform: rotate(360deg);
+    animation: rotation 2.5s linear infinite;
+    -moz-animation: rotation 2.5s linear infinite;
+    -webkit-animation: rotation 2.5s linear infinite;
+    -o-animation: rotation 2.5s linear infinite;
+  }
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+//title style
+
+.zt-title {
+  width: 100%;
+  height: 3.2142rem;
+  position: relative;
+  text-align: center;
+  padding-top: 0.9286rem;
+  box-sizing: border-box;
+  background-color: $bf2;
+  span {
+    padding: 0 16px 5px;
+    background-color: inherit;
+    position: relative;
+    z-index: 2;
+    color: $fGary;
+    font-size: $f15;
+  }
+}
+
+.zt-title:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  padding-top: 1px;
+  background-color: $fGary;
+  left: 0;
+  bottom: 15px;
+}
+
+//share pop
+.share-pop {
+  width: 100%;
+  box-sizing: border-box;
+  p {
+    text-align: center;
+    padding-bottom: 11px;
+  }
+  li {
+    font-size: $f12;
+    line-height: get_rem(16);
+  }
+  li > div {
+    padding-top: get_rem(57);
+    position: relative;
+  }
+}
+
+.account-pop {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: table;
+  .tr {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+  }
+}
+
+.account-suc {
+  margin: 0 auto;
+  width: 150px;
+  height: 90px;
+  background: rgba(0, 0, 0, .7);
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  box-sizing: border-box;
+  border-radius: 7px;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: .2s;
+  animation-duration: .2s;
+  .icon-true {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+  }
+  div {
+    line-height: normal;
+    margin-top: 6px;
+  }
+}
+
+.p-choose {
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  border: 1px solid $bdc;
+  vertical-align: middle;
+  background: #fff;
+  position: relative;
+  cursor: pointer;
+}
+.p-choose:after{
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.p-choose:checked{
+  border: 1px solid #ffb27f;
+}
+.p-choose:checked:after{
+  content: '';
+  width: get_rem(20);
+  height: get_rem(20);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../../../img/icon.png");
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-position: -183px -54px;
+}

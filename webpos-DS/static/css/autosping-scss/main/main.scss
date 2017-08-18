@@ -1,0 +1,17 @@
+@charset "utf-8";
+@import "../../scss/utils/utils";
+
+@import "../../scss/base/reset";
+@import "../base/reset";
+
+@import "../../scss/modules/flex";
+@import "../../scss/modules/frozen";
+@import "../public/public";
+@import "../public/icon";
+
+
+@import "../pages/cart";
+@import "../pages/tally-order";
+@import "../pages/order-list";
+@import "../pages/order-details";
+@import "../pages/mine";

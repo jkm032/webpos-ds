@@ -1,0 +1,360 @@
+@charset "utf-8";
+.settle {
+  .finish {
+    text-align: center;
+  }
+  .you {
+    position: relative;
+    cursor: pointer;
+    select {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 45px;
+      opacity: 0;
+      display: block;
+      cursor: pointer;
+      z-index: 2;
+    }
+  }
+  .chongda {
+    .print_again, .refund-btn {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    .refund-btn {
+      text-align: center;
+      line-height: 39px;
+    }
+  }
+
+  .print-select {
+    margin-top: get_rem(10);
+    select {
+      width: get_rem(100);
+      height: get_rem(30);
+      border: 1px solid $bdc;
+    }
+  }
+  @media screen and (min-width: $smallMin) and (max-width: $padPatternMax) {
+    section {
+      border-top: 45px solid transparent;
+    }
+    .finish {
+      font-size: $f12;
+      line-height: 45px;
+    }
+    .you {
+      select {
+        width: 40px;
+        height: 45px;
+        font-size: $f14;
+      }
+    }
+    .zongji {
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 10px;
+      box-sizing: border-box;
+      border-top: 1px solid $bdc;
+      border-bottom: 1px solid $bdc;
+      li {
+        width: 50%;
+      }
+    }
+    .go {
+      float: right;
+      line-height: 38px;
+      padding-right: 20px;
+      position: relative;
+      background-color: #f5f6fa;
+    }
+    .go:after {
+      font-family: "iconfont" !important;
+      font-size: 28px;
+      font-style: normal;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-stroke-width: 0.2px;
+      display: block;
+      color: rgba(0, 0, 0, 0.5);
+      color: #c7c7c7;
+      content: "\f600";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 20px;
+    }
+    .list {
+      width: 100%;
+      box-sizing: border-box;
+      background-color: #fff;
+      > ul {
+        height: 60px;
+        box-sizing: border-box;
+        padding: 10px 10px;
+        border-bottom: 1px solid $bdc;
+      }
+      .tm {
+        width: 42px;
+        color: $fGary;
+        p:first-child {
+          height: 22px;
+          line-height: 22px;
+        }
+        p:last-child {
+          height: 18px;
+          line-height: 18px;
+          font-size: $f12;
+        }
+      }
+      .tb {
+        width: 26px;
+        position: relative;
+        span {
+          position: absolute;
+          top: 8px;
+          right: 0;
+          width: 26px;
+          height: 26px;
+        }
+        .zhi {
+          background: url("../../../img/icon.png") no-repeat -84px -95px/420px;
+        }
+        .wei {
+          background: url("../../../img/icon.png") no-repeat -42px -95px/420px;
+        }
+        .shuaka {
+          background: url("../../../img/icon.png") no-repeat -127px -95px/420px;
+        }
+        .xianj {
+          background: url("../../../img/icon.png") no-repeat 0 -95px/420px;
+        }
+      }
+      .inf {
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        padding-left: 10px;
+        box-sizing: border-box;
+      }
+      .chongda {
+        width: 30px;
+        height: 100%;
+        line-height: 39px;
+      }
+      .chongda .print_again:after {
+        content: '';
+        @include positCenter;
+        width: 30px;
+        height: 30px;
+        background: url("../../../img/icon.png") no-repeat right -27px/332px;
+      }
+      .dh {
+        font-size: $f12;
+        color: $fGary;
+        height: 18px;
+        line-height: 18px;
+        padding-left: 2px;
+        box-sizing: border-box;
+      }
+      .pr {
+        font-size: $f17;
+        height: 22px;
+        line-height: 22px;
+        display: box;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-flex-direction: row;
+        -moz-flex-direction: row;
+        -ms-flex-direction: row;
+        -o-flex-direction: row;
+        flex-direction: row;
+        .way {
+          font-size: $f12;
+          color: $fGary;
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $padPattern) {
+    .finish {
+      font-size: 14px;
+      line-height: 60px;
+    }
+    section {
+      border-top: 60px solid transparent;
+    }
+    .you {
+      select {
+        width: 65px;
+        height: 60px;
+      }
+    }
+    .zongji {
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      padding: 0 10px;
+      box-sizing: border-box;
+      border-top: 1px solid $bdc;
+      //border-bottom: 1px solid $bdc;
+      li {
+        width: 50%;
+      }
+    }
+    .go {
+      float: right;
+      line-height: 48px;
+      padding-right: 20px;
+      position: relative;
+      background-color: #f5f6fa;
+    }
+    .go:after {
+      font-family: "iconfont" !important;
+      font-size: 28px;
+      font-style: normal;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-stroke-width: 0.2px;
+      display: block;
+      color: rgba(0, 0, 0, 0.5);
+      color: #c7c7c7;
+      content: "\f600";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 20px;
+    }
+    .list {
+      width: 100%;
+      padding: 0 16px;
+      box-sizing: border-box;
+      border-left: 1px solid $bdc;
+      border-right: 1px solid $bdc;
+      > ul {
+        height: 60px;
+        box-sizing: border-box;
+        padding: 10px 20px;
+        border-bottom: 1px solid $bdc;
+        background-color: #fff;
+      }
+      .tm {
+        width: 112px;
+        line-height: 39px;
+        color: $fGary;
+        display: box;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-flex-direction: row;
+        -moz-flex-direction: row;
+        -ms-flex-direction: row;
+        -o-flex-direction: row;
+        flex-direction: row;
+      }
+      .tb {
+        width: 45px;
+        position: relative;
+        span {
+          position: absolute;
+          top: 8px;
+          right: 0;
+          width: 26px;
+          height: 26px;
+        }
+        .zhi {
+          background: url("../../../img/icon.png") no-repeat -84px -95px/420px;
+        }
+        .wei {
+          background: url("../../../img/icon.png") no-repeat -42px -95px/420px;
+        }
+        .shuaka {
+          background: url("../../../img/icon.png") no-repeat -127px -95px/420px;
+        }
+        .xianj {
+          background: url("../../../img/icon.png") no-repeat 0 -95px/420px;
+        }
+      }
+      .inf {
+        display: box;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-flex-direction: row;
+        -moz-flex-direction: row;
+        -ms-flex-direction: row;
+        -o-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        padding-left: 20px;
+        box-sizing: border-box;
+        line-height: 39px;
+      }
+      .chongda {
+        width: 50px;
+        height: 100%;
+        line-height: 39px;
+        text-align: center;
+      }
+      .chongda .print_again:after {
+        content: '';
+        @include positCenter;
+        width: 35px;
+        height: 35px;
+        background: url("../../../img/icon.png") no-repeat right -39px/450px;
+      }
+      .dh {
+        color: $fGary;
+        padding-left: 2px;
+        box-sizing: border-box;
+        width: 56%;
+      }
+      .pr {
+        font-size: $f17;
+        box-sizing: border-box;
+        padding-right: 13px;
+        display: box;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-flex-direction: row;
+        -moz-flex-direction: row;
+        -ms-flex-direction: row;
+        -o-flex-direction: row;
+        flex-direction: row;
+        width: 44%;
+        span {
+          width: 50%;
+        }
+        .way {
+          font-size: $f14;
+          color: $fGary;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+@charset "utf-8";
+.login {
+  .title {
+    font-size: 24px;
+    height: 185px;
+    line-height: 185px;
+    text-align: center;
+  }
+  .account {
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    .uame, .psd {
+      width: 100%;
+      max-width: 400px;
+      height: 50px;
+      line-height: 50px;
+      box-sizing: border-box;
+      padding-left: 44px;
+      position: relative;
+      border: 1px solid #eaeaea;
+      background-color: #fff;
+      border-radius: 5px;
+      margin: 0 auto 10px;
+    }
+    .uame:before, .psd:before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      left: 12px;
+      width: 20px;
+      height: 20px;
+    }
+    .uame:before {
+      background: url("../../../img/icon.png") no-repeat -228px 0/323px;
+    }
+    .psd:before {
+      background: url("../../../img/icon.png") no-repeat -261px 0/323px;
+    }
+    .uname-ipt, .psd-ipt {
+      width: 100%;
+      border: none;
+      outline: none;
+      text-indent: 0;
+    }
+  }
+  .cmt {
+    width: 100%;
+    max-width: 400px;
+    height: 45px;
+    box-sizing: border-box;
+    margin: 40px auto 0;
+    .cmt-btn {
+      width: 100%;
+      height: 45px;
+      line-height: 45px;
+      text-align: center;
+      background-color: $bBlue;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+  .verify {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    input[type='text'] {
+      height: 44px;
+      line-height: 44px;
+      border: 1px solid rgb(234, 234, 234);
+      display: block;
+      width: 70%;
+      margin-right: 10px;
+      border-radius: 5px;
+    }
+    img {
+      width: 100px;
+      height: 46px;
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 410px) {
+    .cmt{
+      padding: 0 10px;
+    }
+  }
+}

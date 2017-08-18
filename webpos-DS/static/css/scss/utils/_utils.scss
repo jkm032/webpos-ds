@@ -1,0 +1,190 @@
+@charset "utf-8";
+//font-size
+$f10 : 0.714rem;
+
+$f11 : 0.786rem;
+
+$f12 : 0.857rem;
+
+$f13 : 0.929rem;
+
+$f14 : 1rem;
+
+$f15 : 1.07rem;
+
+$f16 : 1.14rem;
+
+$f17 : 1.21rem;
+
+$f18 : 1.29rem;
+
+$f19 : 1.36rem;
+
+$f20 : 1.43rem;
+
+
+//height
+$h40: 2.857rem;
+
+$h10: 0.7143rem;
+
+//style response
+$padPattern : 768px;
+
+$padPatternMax : 767px;
+
+$bigMin : 640px;
+
+$mediumMax : 639px;
+
+$mediumMin : 410px;
+
+$smallMax : 409px;
+
+$smallMin : 10px;
+
+
+//font-color
+$fOrigin : #ff5400;
+
+$fGary : #999;
+
+$bGary : #e4e4e4;
+
+$f6 : #666;
+
+$bf2 : #f2f2f2;
+
+$bc : #ccc;
+
+$bPink : #f99674;
+
+$bBlue : #247cff;
+
+$bOrg : #ff6600;
+
+$fff : #fff;
+
+$red : #ff0000;
+
+$fBlack : #333;
+
+$fRed : #cd414b;
+
+$actv : #ececec;
+
+$bdc : #eaeaea;  //border color
+
+$bGreen : #34a91c;
+
+$bY : #df8612;
+
+$bBl :#5b9df4;
+
+$actvBg: #dee7f5;
+
+$pG : #fcff00;
+
+@mixin brkWord{
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+@mixin positCenter{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+@mixin positVC{
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-0%,-50%);
+  -moz-transform: translate(-0%,-50%);
+  -ms-transform: translate(-0%,-50%);
+  -o-transform: translate(-0%,-50%);
+  transform: translate(-0%,-50%);
+}
+
+@mixin positVCLeft{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin positVCRight{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+//triangle
+@mixin triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 8px solid #999;
+  font-size: 0;
+  position: relative;
+  top: -7px;
+}
+@mixin triangle-topleft {
+  width: 0;
+  height: 0;
+  border-top: 8px solid #999;
+  border-right: 8px solid transparent;
+  font-size: 0;
+  position: relative;
+  top: -7px;
+}
+@mixin triangle-right{
+  height: 0;
+  width: 0;
+  border-top: 5px solid transparent;
+  border-left: 8px solid #999;
+  border-bottom: 5px solid transparent;
+  font-size: 0;
+  position: relative;
+  top: -7px;
+}
+@mixin triangle-bottom{
+  height: 0;
+  width: 0;
+  border-top: 8px solid #999;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  font-size: 0;
+  position: relative;
+  top: -3px;
+}
+
+
+//font-omit
+@mixin omit{
+  display: -webkit-box;
+  word-wrap: break-word;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@function get_rem($px){
+  @return ($px/14)*1rem;
+}

@@ -1,0 +1,246 @@
+@charset "utf-8";
+.subscription {
+  .nothing{
+    width: 100%;
+    padding-top: 100px;
+    text-align: center;
+  }
+  .ctn-cover > div {
+    box-sizing: border-box;
+    overflow: hidden;
+    border-bottom: 1px solid $bdc;
+    position: relative;
+    -webkit-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    -ms-transition: height 0.5s;
+    -o-transition: height 0.5s;
+    transition: height 0.5s;
+  }
+  .ctn-cover {
+    height: auto;
+    position: relative;
+  }
+  .open-it {
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+  .ctn-box {
+    background: #fff;
+    border-top: 1px solid $bdc;
+    border-bottom: 1px solid $bdc;
+    box-sizing: border-box;
+  }
+  .num {
+    border-bottom: 1px solid $bdc;
+  }
+  .company {
+    .nm, .peop, .phone {
+      box-sizing: border-box;
+      position: relative;
+    }
+    .nm:before,
+    .peop:before,
+    .phone:before {
+      content: '';
+      position: absolute;
+    }
+  }
+  .smoney {
+    box-sizing: border-box;
+  }
+  .person {
+    overflow: hidden;
+    li {
+      float: left;
+      width: 50%;
+    }
+  }
+  .s-part {
+    position: relative;
+    border-top: 1px solid $bdc;
+    color: $f6;
+    word-break: break-all;
+    word-wrap: break-word;
+    .s-ttl {
+      position: absolute;
+      color: $fGary;
+      background-color: $fff;
+      z-index: 1;
+    }
+  }
+  @media screen and (min-width: $smallMin) and (max-width: $padPatternMax) {
+    .ctn-cover > div {
+      height: 160px;
+    }
+    .ctn-cover {
+      margin: 6px 0 17px 0;
+    }
+    .open-it {
+      bottom: -14px;
+      width: 28px;
+      height: 28px;
+      background: url("../../../img/icon.png") no-repeat -50px -32px/332px;
+    }
+    .open {
+      .open-it {
+        background: url("../../../img/icon.png") no-repeat -96px -32px/332px;
+      }
+    }
+    .ctn-box {
+      li {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+    .num {
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
+    .company {
+      padding-top: 6px;
+      padding-bottom: 6px;
+      .nm, .peop, .phone {
+        padding-left: 25px;
+        height: 30px;
+        line-height: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+      .nm:before,
+      .peop:before,
+      .phone:before {
+        top: 5px;
+        left: 0;
+        width: 20px;
+        height: 20px;
+      }
+      .nm:before {
+        background: url("../../../img/icon.png") no-repeat -109px -24px/255px;
+      }
+      .peop:before {
+        background: url("../../../img/icon.png") no-repeat -142px -24px/255px;
+      }
+      .phone:before {
+        background: url("../../../img/icon.png") no-repeat -176px -24px/255px;
+      }
+    }
+    .smoney {
+      height: 30px;
+      line-height: 20px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+    .s-part {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      .s-ttl {
+        height: 20px;
+        line-height: 20px;
+        top: -10px;
+        left: 0;
+        padding-left: 10px;
+        padding-right: 3px;
+      }
+    }
+  }
+  @media screen and (min-width: $padPattern) {
+    .ctn-cover > div {
+      height: 280px;
+    }
+    .ctn-cover {
+      margin-bottom: 23px;
+      padding: 0 10px;
+    }
+    .open-it {
+      bottom: -23px;
+      width: 46px;
+      height: 46px;
+      background: url("../../../img/icon.png") no-repeat -80px -51px/530px;
+    }
+    .open {
+      .open-it {
+        background: url("../../../img/icon.png") no-repeat -153px -51px/530px;
+      }
+    }
+    .ctn-box {
+      li {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+    .num {
+      box-sizing: border-box;
+      height: 100px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      p {
+        line-height: 35px;
+      }
+    }
+    .company {
+      padding-top: 20px;
+      padding-bottom: 10px;
+      .nm, .peop, .phone {
+        padding-left: 55px;
+        height: 40px;
+        line-height: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      .nm:before,
+      .peop:before,
+      .phone:before {
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+      }
+      .nm:before {
+        background: url("../../../img/icon.png") no-repeat -214px -48px/500px;
+      }
+      .peop:before {
+        background: url("../../../img/icon.png") no-repeat -279px -48px/500px;
+      }
+      .phone:before {
+        background: url("../../../img/icon.png") no-repeat -344px -48px/500px;
+      }
+      .nm {
+        margin-bottom: 12px;
+      }
+    }
+    .person {
+      margin-bottom: 12px;
+    }
+    .smoney {
+      height: 45px;
+      line-height: 20px;
+      padding-top: 10px;
+      padding-bottom: 15px;
+      margin-bottom: 10px;
+    }
+    .s-part {
+      min-height: 90px;
+      box-sizing: border-box;
+      padding-top: 17px;
+      padding-bottom: 17px;
+      margin-bottom: 10px;
+      .s-ttl {
+        height: 20px;
+        line-height: 20px;
+        top: -10px;
+        left: 0;
+        padding-left: 10px;
+        padding-right: 3px;
+      }
+    }
+  }
+}

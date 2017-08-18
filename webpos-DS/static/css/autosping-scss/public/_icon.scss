@@ -1,0 +1,71 @@
+@charset "utf-8";
+.store-icon:after,
+.store-gray-icon:after{
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+
+.store-gray-icon:after{
+  background: url("../../../img/autosping/icon.png") no-repeat -84px -30px/160px;
+}
+.store-icon:after{
+  background: url("../../../img/autosping/icon.png") no-repeat 0 0/160px;
+}
+.account-icon:after{
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: url(../../../img/autosping/icon.png) no-repeat -23px 0/128px;
+}
+.scan-blue-icon:after,
+.scan-white-icon:after{
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+.scan-blue-icon:after{
+  background: url("../../../img/autosping/icon.png") no-repeat 1px -29px/160px;
+}
+.scan-white-icon:after{
+  background: url("../../../img/autosping/icon.png") no-repeat -42px -29px/160px;
+}
+
+.closed-icon:after,
+.done-icon:after,
+.obligation-icon:after{
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+.closed-icon:after{
+  background: url(../../../img/autosping/icon.png) no-repeat -52px -144px/230px;
+}
+.done-icon:after{
+  background: url(../../../img/autosping/icon.png) no-repeat -105px -144px/230px;
+}
+.obligation-icon:after{
+  background: url(../../../img/autosping/icon.png) no-repeat 2px -142px/230px;
+}
+
+.closed-blue-icon:after,
+.done-blue-icon:after,
+.obligation-blue-icon:after{
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+.closed-blue-icon:after{
+  background: url(../../../img/autosping/icon.png) no-repeat -41px -78px/180px;
+}
+.done-blue-icon:after{
+  background: url(../../../img/autosping/icon.png) no-repeat -82px -77px/180px;
+}
+.obligation-blue-icon:after{
+  background: url(../../../img/autosping/icon.png) no-repeat 1px -76px/180px;
+}

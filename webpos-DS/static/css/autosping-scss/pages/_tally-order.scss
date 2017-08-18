@@ -1,0 +1,24 @@
+@charset "utf-8";
+.tally{
+  section {
+    padding-top: get_rem(40);
+    padding-bottom: 50px;
+  }
+  .pub-gd-list{
+    margin-top: 10px;
+  }
+  .weix{
+    padding-left: 25px;
+    margin-left: 15px;
+    position: relative;
+  }
+  .weix:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 20px;
+    background: url("../../../img/autosping/icon.png") no-repeat -108px 3px/150px;
+  }
+}

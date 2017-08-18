@@ -1,0 +1,104 @@
+@charset "utf-8";
+.ord-detail {
+  section{
+    padding-bottom: 50px;
+  }
+  .stat {
+    position: relative;
+    height: get_rem(80);
+    padding-bottom: 3px;
+    background: $bBlue;
+    .ctn {
+      display: none;
+      padding-left: 50px;
+      color: #fff;
+      position: relative;
+      p {
+        color: #fcff00;
+        font-size: $f16;
+      }
+    }
+    .obligation-icon {
+      span {
+        font-size: $f12;
+      }
+      i {
+        color: #fcff00;
+      }
+    }
+    .ctn:after {
+      left: 0;
+      @include positVC;
+    }
+  }
+  .pub-footer{
+    .end-opr{
+      display: none;
+    }
+  }
+  .closed{
+    .closed-icon,
+    .closed-d{
+      display: block;
+    }
+  }
+  .done{
+    .done-icon,
+    .done-d{
+      display: block;
+    }
+  }
+  .obligation{
+    .obligation-icon{
+      display: block;
+    }
+    .obligation-d{
+      display: box;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+    }
+  }
+  .stat:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    background: url("../../../img/autosping/dot.png") repeat-x 0 0/10px;
+    background-color: #f5f6fa;
+  }
+  .store{
+    height: get_rem(40);
+    line-height: get_rem(40);
+    background: #fff;
+    margin-bottom: 10px;
+    span {
+      position: relative;
+      padding-left: 25px;
+    }
+    .store-gray-icon:after {
+      @include positVC;
+      left: 0;
+    }
+  }
+  .odr-inf{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #fff;
+    color: #999;
+    font-size: $f12;
+    li{
+      line-height: 27px;
+    }
+  }
+  .cancel{
+    margin-right: 10px;
+    color: #666;
+    float: right;
+    cursor: pointer;
+  }
+}
