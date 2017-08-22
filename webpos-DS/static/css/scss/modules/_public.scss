@@ -7,7 +7,7 @@
 .icon-true:before,
 .icon-trash:before,
 .icon-search:before,
-.pack-up:before{
+.pack-up:before {
   content: '';
   width: 20px;
   height: 20px;
@@ -42,7 +42,7 @@
   background: url("../../../img/icon.png") no-repeat -271px -32px/332px;
 }
 
-.pack-up:before{
+.pack-up:before {
   background: url("../../../img/icon.png") no-repeat -159px -100px/308px;
 }
 
@@ -54,7 +54,7 @@
   background: url("../../../img/icon.png") no-repeat 0px -117px/360px;
 }
 
-.shopping-icon:before{
+.shopping-icon:before {
   content: '';
   @include positCenter;
   width: 33px;
@@ -70,7 +70,7 @@
   .icon-rtn:before,
   .icon-true:before,
   .icon-trash:before,
-  .icon-search:before{
+  .icon-search:before {
     content: '';
     width: 30px;
     height: 30px;
@@ -177,28 +177,6 @@
   @include triangle-bottom;
 }
 
-@media screen and (min-width: $smallMin) and (max-width: $smallMax) {
-  .triangle-up {
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-bottom: 6px solid #999;
-    top: -6px;
-  }
-  .triangle-right {
-    border-top: 4px solid transparent;
-    border-left: 6px solid #999;
-    border-bottom: 4px solid transparent;
-    top: -6px;
-  }
-  .triangle-bottom {
-    border-top: 6px solid #999;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    position: relative;
-    top: -2px;
-  }
-}
-
 //whiteSpace
 .ui-whitespace {
   padding-left: 10px;
@@ -213,6 +191,10 @@
   }
 }
 
+
+.hide{
+  display: none;
+}
 //color
 .red {
   color: #e0181a;
@@ -229,7 +211,8 @@
 .fff {
   color: #fff;
 }
-.ddd{
+
+.ddd {
   color: #ddd;
 }
 
@@ -281,6 +264,10 @@
 
 .txt-rt {
   text-align: right;
+}
+
+.text-ct{
+  text-align: center;
 }
 
 //mark layer
@@ -344,7 +331,7 @@
 }
 
 //button
-.one-btn{
+.one-btn {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -353,4 +340,25 @@
   background-color: #ff6600;
   color: #fff;
   cursor: pointer;
+}
+
+.pub-bd-btn {
+  display: block;
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid $bBlue;
+  color: $bBlue;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button{
+  cursor: pointer;
+}
+button:disabled{
+  background: #999999 !important;
+  pointer-events: none !important;
+  cursor: not-allowed !important;
 }

@@ -1,6 +1,5 @@
 @charset "utf-8";
 //数量加减控件
-@media screen and (min-width: $padPatternMax) {
   .zt-number {
     display: box;
     display: -webkit-box;
@@ -14,22 +13,23 @@
     -ms-flex-direction: row;
     -o-flex-direction: row;
     flex-direction: row;
-    width: 176px;
-    height: 44px;
+    width: 140px;
+    height: 35px;
     border: 1px solid $bc;
     border-radius: 3px;
+    background: #fff;
     span, input {
       display: block;
     }
     .zt-sub, .zt-add {
       width: 45px;
-      height: 44px;
+      height: 35px;
       position: relative;
       box-sizing: border-box;
     }
     .zt-num {
-      width: 76px;
-      height: 44px;
+      width: 50px;
+      height: 35px;
       border: none;
       outline: none;
       text-align: center;
@@ -45,7 +45,7 @@
       content: '';
       width: 20px;
       height: 3px;
-      background-color: $bc;
+      background-color: $bBlue;
       @include positCenter;
     }
     .zt-add {
@@ -66,75 +66,11 @@
       background-color: $bBlue;
       @include positCenter;
     }
-  }
-}
-
-@media screen and (min-width: $smallMin) and (max-width: $padPatternMax) {
-  .zt-number {
-    display: box;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-flex-direction: row;
-    -moz-flex-direction: row;
-    -ms-flex-direction: row;
-    -o-flex-direction: row;
-    flex-direction: row;
-    width: get_rem(110);
-    height: get_rem(30);
-    border-radius: 3px;
-    overflow: hidden;
-    border: 1px solid $bc;
-    span, input {
-      display: block;
-    }
-    .zt-sub, .zt-add {
-      width: get_rem(32);
-      height: get_rem(30);
-      position: relative;
-    }
-    .zt-num {
-      width: get_rem(36);
-      height: get_rem(30);
-      border: none;
-      outline: none;
-      text-align: center;
-      font-size: $f14;
-      text-indent: 0;
-      margin: 0 5px;
-    }
-    .zt-sub {
-      border-right: 1px solid $bc;
-    }
-    .zt-sub:before {
-      content: '';
-      width: 10px;
-      height: 2px;
+    .zt-disabled:before,
+    .zt-disabled:after{
       background-color: $bc;
-      @include positCenter;
-    }
-    .zt-add {
-      border-left: 1px solid $bc;
-    }
-    .zt-add:before {
-      content: '';
-      width: 10px;
-      height: 2px;
-      background-color: $bBlue;
-      @include positCenter;
-    }
-    .zt-add:after {
-      content: '';
-      width: 2px;
-      height: 10px;
-      background-color: $bBlue;
-      @include positCenter;
     }
   }
-}
 
 //hint style
 .zt-hint-box {

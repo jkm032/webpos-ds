@@ -1,9 +1,7 @@
 <template>
     <div class="cart" id="cart">
-		<div class="ctop">
-			<ctntop></ctntop>
-		</div>
-		<div class="cbottom">
+		<ctntop></ctntop>
+		<div class="cbottom flex-h">
 			<div class="cleft">
 				<!-- <router-view name="ctnleft"></router-view> -->
 				<ctnleft></ctnleft>
@@ -13,7 +11,7 @@
 				<ctnright></ctnright>
 			</div>
 			<!-- <router-view name="sidebar"></router-view> -->
-			<sidebar></sidebar>
+			 <sidebar></sidebar> 
 		</div>
     </div>
 </template>
@@ -24,8 +22,10 @@
 	import CartLeft from '../carts/cart-left'
 	import CartRight from '../carts/cart-right'
 
+	import $ from 'jquery'
 
 export default {
+	name: 'cart',
 	components:{
 		'ctntop': Nav1,
 		'ctnleft': CartLeft,
@@ -35,23 +35,3 @@ export default {
 }
 
 </script>
-<style>
-.cart{
-	width: 100%;
-	height:500px; 
-}
-.ctop{
-	height: 45px;
-	width: 100%;
-}
-.cbottom{
-	width: 100%;
-	height: 500px;
-	display: flex;
-}
-.cleft,.cright{
-	width: 50%;
-	height: 100%;
-	text-align: center;
-}
-</style>
